@@ -1,0 +1,18 @@
+Parks
+// Park polygons within Melbourne bbox
+[out:json][timeout:90];
+(
+  way["leisure"="park"](south,west,north,east);
+  relation["leisure"="park"](south,west,north,east);
+);
+out body; >; out skel qt;
+
+
+Trees
+// Individual trees and tree rows
+[out:json][timeout:90];
+(
+  node["natural"="tree"](south,west,north,east);
+  way["natural"="tree_row"](south,west,north,east);
+);
+out body; >; out skel qt;
